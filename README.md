@@ -3,7 +3,7 @@
   <h2 align="center">GSORB-SLAM: Gaussian Splatting SLAM benefits from<br>ORB features and Transmittance information</h2>
 
 <h3 align="center">
-    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11091447"> <img src="https://img.shields.io/badge/IEEE-RA--L-004c99"> </a>
+    <a href=""> <img src="https://img.shields.io/badge/IEEE-RA--L-004c99"> </a>
     <a href="https://arxiv.org/abs/2410.11356" target="_blank">
     <img src="https://img.shields.io/badge/arXiv-2410.21955-blue?logo=arxiv&color=%23B31B1B" alt="Paper arXiv"></a>
     <a href="https://aczheng-cai.github.io/gsorb-slam.github.io/" target="_blank">
