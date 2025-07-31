@@ -176,7 +176,7 @@ source run_tum.sh
 
 ### 📊Evaluation
 
-You need to modify the YAML file: `Dataset.name` specifies the result folder, and `Dataset.sequence` specifies the ground truth sequence. Then，
+You need to modify the YAML file: `Dataset.name` specifies the result folder, and `Dataset.path` specifies the ground truth path. Then，
 
 ```
 python scripts/replay.py --yamlPath "your_yaml_path"
