@@ -174,7 +174,7 @@ source run_tum.sh
 You need to modify the YAML file: `Dataset.name` specifies the result folder, and `Dataset.sequence` specifies the ground truth sequence. Then，
 
 ```
-python scripts/replay.py --yamlPath "your_ymal_path"
+python scripts/replay.py --yamlPath "your_yaml_path"
 ```
 
 If you are using the TUM dataset, you also need to add the `--tumAss` parameter.
