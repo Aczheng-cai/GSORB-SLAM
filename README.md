@@ -28,7 +28,7 @@ Our project has been tested on Ubuntu 20.04 and 22.04 with CUDA 11.8.
 Clone the repository and create the conda environment:
 
 ```
-git clone https://github.com/Aczheng-cai/GSORB-SLAM.git GSORB_SLAM
+git clone --recurse https://github.com/Aczheng-cai/GSORB-SLAM.git GSORB_SLAM
 conda create -n gsorbslam python=3.10
 conda activate gsorbslam
 conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
@@ -95,7 +95,8 @@ make -j$(nproc)
 sudo make install
 
 #install pangolin-0.6. We recommend using version 0.6.
-git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
+cd ../../
+git clone --recursive https://github.com/stevenlovegrove/Pangolin.git Pangolin
 cd Pangolin
 git checkout v0.6
 mkdir build && cd build
