@@ -70,10 +70,6 @@ sudo make install
 
 Required by g2o (see below). Download and install instructions can be found at: [http://eigen.tuxfamily.org](http://eigen.tuxfamily.org/).
 
-### Pangolin-0.6
-
-We use [Pangolin](https://github.com/stevenlovegrove/Pangolin) for visualization and user interface. Dowload and install instructions can be found at: [https://github.com/stevenlovegrove/Pangolin](https://github.com/stevenlovegrove/Pangolin).
-
 ### Thirdparty
 
 Install third-party libraries, including Gaussian Splatting, tinyply, yaml, and wandb (more may be added later ⏳).
@@ -97,9 +93,18 @@ mkdir build && cd build
 cmake ..
 make -j$(nproc)
 sudo make install
+
+#install pangolin-0.6. We recommend using version 0.6.
+git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
+cd Pangolin
+git checkout v0.6
+mkdir build && cd build
+cmake ..
+make -j$(nproc)
+sudo make install
 ```
 
-## Installation of GSORB-SLAM
+## Installation of GSORB-SLAM🎉️ 
 
 ```
 cd ~/GSORB_SLAM
@@ -192,4 +197,3 @@ If you find our code/work useful in your research, please consider citing the fo
   pages={1-8},
   doi={10.1109/LRA.2025.3592066}}
 ```
-
