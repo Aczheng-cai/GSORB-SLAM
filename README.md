@@ -165,7 +165,7 @@ Run the TUM RGB-D dataset sequence `rgbd_dataset_freiburg1_desk`.
 
 ```
 cd ~/GSORB_SLAM
-./Examples/RGB-D/rgbd_tum ~/GSORB_SLAM/Vocabulary/ORBvoc.txt ~/GSORB_SLAM/Examples/RGB-D/tum/TUM1.yaml ~/dataset/rgbd_dataset_freiburg1_desk/ ~/GSORB_SLAM/Examples/RGB-D/associations/fr1_desk.txt
+./Examples/RGB-D/rgbd_tum ~/GSORB_SLAM/Vocabulary/ORBvoc.txt ~/GSORB_SLAM/Examples/RGB-D/tum/TUM1.yaml ~/datasets/rgbd_dataset_freiburg1_desk/ ~/GSORB_SLAM/Examples/RGB-D/associations/fr1_desk.txt
 ```
 
 💡 We provide a script (located at `~/GSORB_SLAM/scripts/run_*.sh`) to run the process—simply update the dataset path.
