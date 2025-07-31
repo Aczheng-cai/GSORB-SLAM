@@ -104,7 +104,7 @@ make -j$(nproc)
 sudo make install
 ```
 
-## Installation of GSORB-SLAM🎉️ 
+## Installation of GSORB-SLAM🎉️
 
 ```
 cd ~/GSORB_SLAM
@@ -145,19 +145,22 @@ bash scripts/dataset_utils/download_replica.sh
 Please follow the data downloading procedure on the [ScanNet](http://www.scan-net.org/) website, and extract color/depth frames from the `.sens` file using this [code](https://github.com/ScanNet/ScanNet/blob/master/SensReader/python/reader.py).
 
 ```
-DATAROOT 
- ├── scene0000_00
-   ├── cameras.json
-   ├── color
-   ├── depth
-   ├── groundtruth.txt <---- python scannet2tum.py ~/GSORB_SLAM/datasets/Scannet/scene0000_00/trajectory.txt
-   ├── intrinsic
-   ├── pose
-   └── trajectory.txt <----sh pose2traj.sh
+datasets
+├── Scannet
+│   ├── scene0000_00
+│   │   ├── cameras.json
+│   │   ├── color
+│   │   ├── depth
+│   │   ├── groundtruth.txt <---- python filter.py ~/GSORB_SLAM/datasets/Scannet/scene0000_00/trajectory.txt
+│   │   ├── intrinsic
+│   │   ├── pose
+│   │   └── trajectory.txt  <----sh pose2traj.sh
+├── Replica
+└── TUM_RGBD
 ```
 
 1. ScanNet requires using the script `pose2traj.sh` to convert poses into 4×4 continue trajectory matrices for evaluation.
-2. The converted trajectories may contain `inf` values, which can be filtered out using `scannet2tum.py`. This script also converts the 4×4 transformation matrices into the TUM trajectory format.
+2. The converted trajectories may contain `inf` values, which can be filtered out using `filter.py`.
 
 ## 🚀 Run
 
@@ -171,12 +174,14 @@ cd ~/GSORB_SLAM
 💡 We provide a script (located at `~/GSORB_SLAM/scripts/run_*.sh`) to run the process—simply update the dataset path.
 
 ```
-source run_tum.sh
+bash scripts/run_tum.sh
 ```
+
+Run all datasets `bash run.sh`. The results are saved in `~/GSORB_SLAM/experiments`.
 
 ### 📊Evaluation
 
-You need to modify the YAML file: `Dataset.name` specifies the result folder, and `Dataset.path` specifies the ground truth path. Then，
+You need to modify the YAML file: `Dataset.name` specifies the result folder, and `Dataset.path` specifies the ground truth path. Then,
 
 ```
 python scripts/replay.py --yamlPath "your_yaml_path"
