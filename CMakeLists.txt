@@ -31,7 +31,7 @@ LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
 # ##############################################################################
 # Set Python
 # ##############################################################################
-set(ENVIRONMENT_DIR zwc/home/anaconda3/envs/gsorbslam)
+set(ENVIRONMENT_DIR your_anconda3_path/anaconda3/envs/gsorbslam)
 set(PYTHON_INCLUDE_DIR "${ENVIRONMENT_DIR}/include/python3.10")
 set(PYTHON_LIB "${ENVIRONMENT_DIR}/lib/libpython3.10.so")
 
