@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "string": "cpp",
+        "cstddef": "cpp"
+    },
+    {
+        "editor.minimap.enabled": true,
+        "C_Cpp.autocomplete": "Default",
+        "C_Cpp.intelliSenseEngine": "Default",
+        "[cpp]": {
+            "editor.quickSuggestions": true
+        },
+        "[c]": {
+            "editor.quickSuggestions": true
+        }
+    }
+    
+}

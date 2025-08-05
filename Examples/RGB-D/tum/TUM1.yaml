@@ -1,0 +1,128 @@
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+Dataset:
+  name: tum_desk1-0
+  type: tum
+  path: datasets/TUM_RGBD/rgbd_dataset_freiburg1_desk
+# Camera calibration and distortion parameters (OpenCV) 
+Camera:
+  width: 640
+  height: 480
+  fx: 517.306408
+  fy: 516.469215
+  cx: 318.643040
+  cy: 255.313989
+  fps: 30.0
+# Camera calibration and distortion parameters (OpenCV) 
+Camera.k1: 0.262383
+Camera.k2: -0.953104
+Camera.p1: -0.005358
+Camera.p2: 0.002628
+Camera.k3: 1.163314
+# Camera frames per second 
+Camera.fps: 30.0
+# IR projector baseline times fx (aprox.)
+Camera.bf: 40.0
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+# Close/Far threshold. Baseline times.
+ThDepth: 40.0
+# Deptmap values factor 
+DepthMapFactor: 5000.0
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 1000
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500
+Viewer:
+  KeyFrameSize: 0.05
+  KeyFrameLineWidth: 1
+  GraphLineWidth: 0.9
+  PointSize: 2
+  CameraSize: 0.08
+  CameraLineWidth: 3
+  ViewpointX: 0
+  ViewpointY: -0.7
+  ViewpointZ: -1.8
+  ViewpointF: 500
+  mode: 1 # 0: non, 1: Pangolin, 2: OPENGL
+Viewer2:
+  glfw_window_width: 1300
+  glfw_window_height: 1000
+  image_scale: 0.5
+  image_scale_main: 1.0
+  camera_watch_dist: 0.000001
+  ViewpointX: 0.0
+  ViewpointY: -0.7
+  ViewpointZ: -1.8
+  ViewpointF: 500.0
+#--------------------------------------------------------------------------------------------
+# Gaussian Splatting
+#--------------------------------------------------------------------------------------------
+Mapping:
+  numIters: 100
+  imWeight: 1.0
+  depthWeight: 0.7
+  surDepthWeight: 0.35
+  regLongWeight: 5.0
+  regScalarWeight: 10
+  lambda: 0.8
+  lrsMean3D: 0.0001
+  lrsRgb: 0.0025
+  lrsUnnormRotation: 0.001
+  lrsLogitOpacities: 0.05
+  lrsLogScales: 0.001
+  backgroundColor: 0.0
+  pruneOpcities: 0.005
+  scaleModifier: 1.0
+  initScalarMethod: 2
+  raduisDepthRatio: 3.0
+  madienMul: 10
+  useRadiusFilter: False
+Tracking:
+  numIters: 200
+  lrsCamQuat: 0.002
+  lrsCamTrans: 0.00215
+  imWeight: 0.7
+  featureWeight: 0.1
+  depthWeight: 1.0
+  useSurDepth: true
+#--------------------------------------------------------------------------------------------
+# DEBUG
+#--------------------------------------------------------------------------------------------
+Debug:
+  useWandb: false
+  useLoop: true
+#--------------------------------------------------------------------------------------------
+# Eval
+#-------------------------------------------------------------------------------------------- 
+Evalution:
+  enable: true
+  savePly: true
+  saveRootPath: experiments
