@@ -13,7 +13,7 @@
 </h3>
 <div align="center"></div>
 
-<div align=center> <img src="https://github.com/Aczheng-cai/GSORB-SLAM/blob/main/firgure/pipline.png" width="850"/> </div>
+<div align=center> <img src="https://github.com/Aczheng-cai/GSORB-SLAM/blob/main/pipline.png" width="850"/> </div>
 
 ## 💡 News
 
