@@ -19,7 +19,8 @@
 
 * **[14 July 2025]** 🎉 Our paper **GSORB-SLAM** has been accepted to **IEEE RA-L 2025**!
 * 🌟 If you find this project interesting, please consider starring it to support us!
-
+* 🚧 The code is still under development. Feedback and issue reports are welcome.
+* 🙏 Many thanks to all researchers who contribute to the open-source community — respect!
 ## 🛠️ Installation
 
 Our project has been tested on Ubuntu 20.04 and 22.04 with CUDA 11.8.
