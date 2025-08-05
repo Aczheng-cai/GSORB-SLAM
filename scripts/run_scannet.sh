@@ -3,7 +3,7 @@
 #For more information see <https://github.com/Aczheng-cai/GSORB-SLAM>
 
 # Configuration
-experiment_count=0    # Number of runs per scene (0 to 5)
+experiment_count=5    # Number of runs per scene (0 to 5)
 
 ####################################################
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
