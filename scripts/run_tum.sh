@@ -3,7 +3,7 @@
 #For more information see <https://github.com/Aczheng-cai/GSORB-SLAM>
 
 # Configuration
-experiment_count=1  # Number of runs per scene (1 to 5)
+experiment_count=5  # Number of runs per scene (1 to 5)
 
 
 ####################################################
