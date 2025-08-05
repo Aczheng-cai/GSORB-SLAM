@@ -1,0 +1,6 @@
+[submodule "Thirdparty/yaml-cpp"]
+	path = Thirdparty/yaml-cpp
+	url = https://github.com/jbeder/yaml-cpp.git
+[submodule "Thirdparty/tinyply"]
+	path = Thirdparty/tinyply
+	url = https://github.com/ddiakopoulos/tinyply.git
