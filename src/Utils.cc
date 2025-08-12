@@ -438,8 +438,8 @@ void Evalution(Render* pRender,const vector<cv::Mat>& Twc,const vector<cv::Mat>&
         inputs1.push_back(renderedIm.unsqueeze(0));
         inputs1.push_back(tsImage.unsqueeze(0));
         float lpips = LPIPSModel.forward(inputs1).toTensor().item<float>();
-        inputs2.push_back(renderedIm.div(255).unsqueeze(0).contiguous().cuda());
-        inputs2.push_back(tsImage.div(255).unsqueeze(0).contiguous().cuda());
+        inputs2.push_back(renderedIm.unsqueeze(0).contiguous().cuda());
+        inputs2.push_back(tsImage.unsqueeze(0).contiguous().cuda());
         float ms_ssim = SSIMModel.forward(inputs2).toTensor().item<float>();
         float ssim = SSIM(renderedIm,tsImage,GPU0).item<float>();
 
